@@ -1,0 +1,39 @@
+{
+    "name": "arifszn/reddit-image-fetcher",
+    "description": "A PHP package for fetching bulk reddit memes, wallpapers and more",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ariful Alam",
+            "email": "swazan.arif@gmail.com",
+            "homepage": "https://arifszn.github.io"
+        }
+    ],
+    "keywords": [
+        "reddit",
+        "meme",
+        "wallpaper",
+        "wallpapers",
+        "random wallpaper",
+        "reddit wallpaper",
+        "random wallpapers",
+        "reddit wallpaper",
+        "random memes",
+        "random-meme",
+        "random-memes",
+        "reddit memes",
+        "subreddit",
+        "php meme",
+        "php wallpaper",
+        "Laravel meme",
+        "Laravel wallpaper"
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "arifszn\\RedditImageFetcher\\": "src/"
+        }
+    }
+}
