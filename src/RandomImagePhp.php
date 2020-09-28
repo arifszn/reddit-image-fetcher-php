@@ -51,87 +51,53 @@ class RedditImageFetcher
     }
 
     /**
-     * Get memes
+     * Fetch images.
      * 
-     * @param int $total | number of memes to get
-     * @param array $addSubreddit | add subreddits to existing library
-     * @param array $removeSubreddit | remove subreddits from existing library
-     * @param int $searchLimit | number of posts to search
-     * @param bool $removeAllSubreddit | remove all subreddits from existing library
-     * @return array|exception | returns array when success, exception when error
-     * @throws Exception
+     * @param string $type 'meme' | 'wallpaper' | 'custom'
+     * @param int $total number of images to get
+     * @param array $subreddit Custom subreddit libray
+     * @param array $addSubreddit Add subreddits to subreddit library
+     * @param array $removeSubreddit Remove subreddits from subreddit library	
+     * @return array|exception returns array when success, exception when error
+     * @throws Exception 
      */
-    public function getMemes(int $total = 1, array $addSubreddit = [], array $removeSubreddit = [], int $searchLimit = 100, bool $removeAllSubreddit = false)
+    public function fetch(string $type = 'meme', int $total = 1, array $subreddit = [], array $addSubreddit = [], array $removeSubreddit = [])
     {
         try {
-            $memeSubReddit  = $this->config->getMemeSubReddit();
+            $searchLimit = 75;
+            $subredditLibrary  = $this->config->getMemeSubReddit();
+
+            if ($type === 'wallpaper') {
+                $subredditLibrary = $this->config->getWallpaperSubReddit();
+            } elseif ($type === 'custom') {
+                $subredditLibrary = [];
+            }
             
-            if ($total > 50)
-                throw new Exception('Get limit exceeded');
-            if ($total < 1)
-                throw new Exception('Get limit should be greater than 0');
-            if ($searchLimit > 100) 
-                throw new Exception('Search limit exceeded');
-            if ($searchLimit < 1)
-                throw new Exception('Search limit should be greater than 0');
-            if ($removeAllSubreddit)
-                $memeSubReddit = [];
+            if ($total > 50) {
+                throw new Exception('max value of total is 50');
+            }
+                
+            if ($total < 1) {
+                throw new Exception('min value of total is 1');
+            }
+            
+            $subredditLibrary = array_merge($subredditLibrary, $addSubreddit);
 
-            $memeSubReddit = array_merge($memeSubReddit, $addSubreddit);
-
-            foreach ($removeSubreddit as $key => $subreddit) {
-                $index = array_search($subreddit, $memeSubReddit);
+            foreach ($removeSubreddit as $key => $each) {
+                $index = array_search($each, $subredditLibrary);
                 if ($index === true)
-                    unset($memeSubReddit[$index]);
+                    unset($subredditLibrary[$index]);
+            }
+
+            if ($type === 'custom') {
+                $subredditLibrary = $subreddit;
             }
             
-            if (!count($memeSubReddit)) {
-                throw new Exception('Subreddit library is empty');
+            if (!count($subredditLibrary)) {
+                throw new Exception('Can not fetch from empty subreddit library');
             }
-            return $this->getRandomPosts($total, 'meme', $memeSubReddit, $searchLimit);
-        } catch (\Throwable $th) {
-            throw new Exception($th);
-        }
-    }
 
-    /**
-     * Get wallpapers
-     * 
-     * @param int $total | number of wallpapers to get
-     * @param array $addSubreddit | add subreddits to existing library
-     * @param array $removeSubreddit | remove subreddits from existing library
-     * @param int $searchLimit | number of posts to search
-     * @param bool $removeAllSubreddit | remove all subreddits from existing library
-     * @return array|exception | returns array when success, exception when error
-     * @throws Exception
-     */
-    public function getWallpapers(int $total = 1, array $addSubreddit = [], array $removeSubreddit = [], int $searchLimit = 100, bool $removeAllSubreddit = false)
-    {
-        try {
-            $wallpaperSubReddit  = $this->config->getWallpaperSubReddit();
-            
-            if ($total > 50)
-                throw new Exception('Get limit exceeded');
-            if ($total < 1)
-                throw new Exception('Get limit should be greater than 0');
-            if ($searchLimit > 100) 
-                throw new Exception('Search limit exceeded');
-            if ($searchLimit < 1)
-                throw new Exception('Search limit should be greater than 0');
-            if ($removeAllSubreddit)
-                $wallpaperSubReddit = [];
-
-            $wallpaperSubReddit = array_merge($wallpaperSubReddit, $addSubreddit);
-
-            foreach ($removeSubreddit as $key => $subreddit) {
-                $index = array_search($subreddit, $wallpaperSubReddit);
-                if ($index === true)
-                    unset($wallpaperSubReddit[$index]);
-            }
-            if (!count($wallpaperSubReddit)) {
-                throw new Exception('Subreddit library is empty');
-            }
-            return $this->getRandomPosts($total, 'wallpaper', $wallpaperSubReddit, $searchLimit);
+            return $this->getRandomPosts($total, $type, $subredditLibrary, $searchLimit);
         } catch (\Throwable $th) {
             throw new Exception($th);
         }
@@ -178,7 +144,7 @@ class RedditImageFetcher
             if ($type === 'wallpaper')
                 $includeGif = false;
             if (isset($post->data->url) && is_string($post->data->url) && $this->utils->isImageUrl($post->data->url, $includeGif))
-                array_push($fetchedPost, $this->utils->formatPost($post->data));
+                array_push($fetchedPost, $this->utils->formatPost($post->data, $type));
         }
         
         //if limit is not reached, retry with already fetched data 

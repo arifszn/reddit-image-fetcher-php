@@ -1,30 +1,52 @@
-# Reddit Image Fetcher
+<p align="center">
+  <a href="https://arifszn.github.io/reddit-image-fetcher-php" target="_blank"><img src="https://arifszn.github.io/reddit-image-fetcher-php/img/logo/logo.png" alt="Reddit Image Fetcher" title="Reddit Image Fetcher" width="80"></a>
+</p>
+<h1 align="center">Reddit Image Fetcher</h1>
+<p align="center">A PHP package for fetching reddit images, memes, wallpapers and more.</p>
+<p align="center">https://arifszn.github.io/reddit-image-fetcher-php</p>
 
-A PHP package for fetching bulk reddit memes, wallpapers and more.
+<p align="center">
+  <a href="https://packagist.org/packages/arifszn/reddit-image-fetcher"><img src="https://img.shields.io/packagist/v/arifszn/reddit-image-fetcher"/></a>
+  <a href="https://github.com/arifszn/reddit-image-fetcher-php/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/arifszn/reddit-image-fetcher"/></a>
+    <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/maintainer-arifszn-informational" alt="Maintainer arifszn"/></a>
+</p>
 
-Features
-
+- Bulk images
 - Bulk memes
 - Bulk wallpapers
 - Customizable
 - Lightweight
 - Zero dependency
 
-Javascript package is available at <a href="https://www.npmjs.com/package/reddit-image-fetcher">NPM</a>.
+JavaScript version: <a href="https://github.com/arifszn/reddit-image-fetcher">Reddit Image Fetcher</a>
 
-> <p><strong><a href="https://memewall.netlify.app">Homepage</a></strong></p>
+## Table of Contents
+
+* [Resources](#resources)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Result](#result)
+* [Options](#options)
+* [Support](#support)
+* [License](#license)
+
+## Resources
+
+- [Demo](https://memewall.netlify.app)
+- [Documentation](https://arifszn.github.io/reddit-image-fetcher-php)
 
 # Installation
-Install via <a href="https://packagist.org/packages/arifszn/reddit-image-fetcher">Composer</a>
+
+Install via <a href="https://packagist.org/packages/arifszn/reddit-image-fetcher">composer</a>
+
 ```
 composer require arifszn/reddit-image-fetcher
 ```
 
 ## Usage
 
-Available functions:
-- getMemes()
-- getWallpapers()
+Available function:
+- fetch()
 
 ```php
 use arifszn\RedditImageFetcher\RedditImageFetcher;
@@ -34,38 +56,39 @@ use arifszn\RedditImageFetcher\RedditImageFetcher;
 
 
 $redditImageFetcher = new RedditImageFetcher();
-$redditImageFetcher->getMemes(); //returns 1 meme
-$redditImageFetcher->getWallpapers(); //returns 1 wallpaper
+$redditImageFetcher->fetch('meme'); //returns 1 meme
+$redditImageFetcher->fetch('wallpaper'); //returns 1 wallpaper
 
 
 //options
-$redditImageFetcher->getWallpapers(50); //returns 50 wallpapers 
+$redditImageFetcher->fetch('wallpaper', 50); //returns 50 wallpapers 
  
-$redditImageFetcher->getMemes(
-    50, 
-    ['memes', 'funny'],
-    ['dankmemes'],
-    100
-); //returns 50 memes by filtering
-
-
-//can be use other than fetching memes and wallpapers
-//use as cat image fetcher
-$redditImageFetcher->getMemes(
-    50, 
-    ['cats', 'Catswhoyell', 'sleepingcats'],
+$redditImageFetcher->fetch(
+    'meme',
+    50,
     [],
-    100,
-    true
+    ['memes', 'funny'],
+    ['dankmemes']
+); //returns 50 memes by adding two and removing 1 subreddits
+
+
+//custom image fetch from given subreddits
+$redditImageFetcher->fetch(
+    'other',
+    50, 
+    ['cats', 'Catswhoyell', 'sleepingcats']
 ); //returns 50 cat images
 ```
+
 ## Result
 
-The functions return array.
+The function returns array.
+
 ```php
 array:2 [▼
-  0 => array:9 [▼
+  0 => array:10 [▼
     "id" => "hfh51v"
+    "type" => "wallpaper"
     "title" => "Illuminated City at Night [1920 x 1200]"
     "postLink" => "https://redd.it/hfh51v"
     "image" => "https://i.redd.it/b6x9i2n830751.jpg"
@@ -75,8 +98,9 @@ array:2 [▼
     "spoiler" => false
     "createdUtc" => 1593066557.0
   ]
-  1 => array:9 [▼
+  1 => array:10 [▼
     "id" => "h9glhi"
+    "type" => "wallpaper"
     "title" => "Missing Home by Just Jaker"
     "postLink" => "https://redd.it/h9glhi"
     "image" => "https://cdnb.artstation.com/p/assets/images/images/027/020/665/large/just-jaker-galax-noise.jpg"
@@ -91,21 +115,17 @@ array:2 [▼
 
 ## Options
 
-```php
-public function getMemes(int $total = 1, array $addSubreddit = [], array $removeSubreddit = [], int $searchLimit = 100, bool $removeAllSubreddit = false)
-```
+| Property            |  Type   | Description                                               | Default |
+| :-----------        | :---:   | :-------------------------------------                    | :----:  |
+| type               | string  | meme, wallpaper or custom image to fetch                         | 'meme'       |
+| total               | int  | How many images to get. Max is 50                         | 1       |
+| subreddit        | array   | Custom subreddit libray                    |   [ ]   |
+| addSubreddit        | array   | Add subreddits to subreddit library                    | [ ]     |
+| removeSubreddit     | array   | Remove subreddits from subreddit library               | [ ]     |
 
+## Support
 
-| Property            |  Type   | Description                                     | Default |
-| :-----------        | :---:   | :-------------------------------------          | :----:  |
-| total                 | int     | How many images to get. Max is 50.              | 1       |
-| addSubReddit        | array   | Add subreddits to subreddit library.            | [ ]     |
-| removeSubReddit     | array   | Remove subreddits from subreddit library.       | [ ]     |
-| searchLimit         | int     | Max reddit posts to search. Max is 100.         | 100     |
-| removeAllSubReddit  | boolean | Remove all subreddits from subreddit library.   | false   |
-
-## Demo
-<p>See the package in action <a href="https://memewall.netlify.app">Here</a>.</p>
+Show your ❤️ and support by giving a ⭐ on <a href="https://github.com/arifszn/reddit-image-fetcher-php">Github</a>.
 
 ## License
 

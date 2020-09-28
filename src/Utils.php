@@ -90,16 +90,16 @@ class Utils
      * Format the raw post
      * 
      * @param object $post 
+     * @param string $type 
      * @return array 
      * @throws Exception 
      */
-    public function formatPost(object $post)
+    public function formatPost(object $post, string $type)
     {
         try {
-            // $post = json_encode($post);
-            
             return [
                 'id'         => isset($post->id) ? $post->id : null,
+                'type'       => $type,
                 'title'      => isset($post->title) ? $post->title : null,
                 'postLink'   => isset($post->id) ? 'https://redd.it/' . $post->id : null,
                 'image'      => isset($post->url) ? $post->url : null,
