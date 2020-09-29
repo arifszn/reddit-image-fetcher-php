@@ -1,13 +1,13 @@
 <p align="center">
-  <a href="https://arifszn.github.io/reddit-image-fetcher-php" target="_blank"><img src="https://arifszn.github.io/reddit-image-fetcher-php/img/logo/logo.png" alt="Reddit Image Fetcher" title="Reddit Image Fetcher" width="80"></a>
+    <a href="https://arifszn.github.io/reddit-image-fetcher-php" target="_blank"><img src="https://arifszn.github.io/reddit-image-fetcher-php/img/logo/logo.png" alt="Reddit Image Fetcher" title="Reddit Image Fetcher" width="80"></a>
 </p>
 <h1 align="center">Reddit Image Fetcher</h1>
 <p align="center">A PHP package for fetching reddit images, memes, wallpapers and more.</p>
 <p align="center">https://arifszn.github.io/reddit-image-fetcher-php</p>
 
 <p align="center">
-  <a href="https://packagist.org/packages/arifszn/reddit-image-fetcher"><img src="https://img.shields.io/packagist/v/arifszn/reddit-image-fetcher"/></a>
-  <a href="https://github.com/arifszn/reddit-image-fetcher-php/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/arifszn/reddit-image-fetcher"/></a>
+    <a href="https://packagist.org/packages/arifszn/reddit-image-fetcher"><img src="https://img.shields.io/packagist/v/arifszn/reddit-image-fetcher"/></a>
+    <a href="https://github.com/arifszn/reddit-image-fetcher-php/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/arifszn/reddit-image-fetcher"/></a>
     <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/maintainer-arifszn-informational" alt="Maintainer arifszn"/></a>
 </p>
 
@@ -74,7 +74,7 @@ $redditImageFetcher->fetch(
 
 //custom image fetch from given subreddits
 $redditImageFetcher->fetch(
-    'other',
+    'custom',
     50, 
     ['cats', 'Catswhoyell', 'sleepingcats']
 ); //returns 50 cat images
