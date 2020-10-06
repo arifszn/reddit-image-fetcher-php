@@ -63,7 +63,6 @@ class Config
         'wallpaper',
         'wallpapers',
         'iWallpaper',
-        'Rainmeter',
         'earthporn',
         'SkyPorn',
         'Beachporn',

@@ -3,11 +3,11 @@
 </p>
 <h1 align="center">Reddit Image Fetcher</h1>
 <p align="center">A PHP package for fetching reddit images, memes, wallpapers and more.</p>
-<p align="center">https://arifszn.github.io/reddit-image-fetcher-php</p>
+<p align="center"><a href="https://arifszn.github.io/reddit-image-fetcher-php">https://arifszn.github.io/reddit-image-fetcher-php</a></p>
 
 <p align="center">
     <a href="https://packagist.org/packages/arifszn/reddit-image-fetcher"><img src="https://img.shields.io/packagist/v/arifszn/reddit-image-fetcher"/></a>
-    <a href="https://github.com/arifszn/reddit-image-fetcher-php/blob/master/LICENSE"><img src="https://img.shields.io/packagist/l/arifszn/reddit-image-fetcher"/></a>
+    <a href="https://github.com/arifszn/reddit-image-fetcher-php/blob/master/LICENSE"><img src="https://img.shields.io/github/license/arifszn/reddit-image-fetcher-php"/></a>
     <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/maintainer-arifszn-informational" alt="Maintainer arifszn"/></a>
 </p>
 
@@ -32,7 +32,7 @@ JavaScript version: <a href="https://github.com/arifszn/reddit-image-fetcher">Re
 
 ## Resources
 
-- [Demo](https://memewall.netlify.app)
+- [Demo](https://memedb.netlify.app)
 - [Documentation](https://arifszn.github.io/reddit-image-fetcher-php)
 
 # Installation
