@@ -97,6 +97,9 @@ array:2 [▼
     "NSFW" => false
     "spoiler" => false
     "createdUtc" => 1593066557.0
+    "upvotes" => 1899
+    "downvotes" => 0
+    "upvoteRatio" => 1.0
   ]
   1 => array:10 [▼
     "id" => "h9glhi"
@@ -108,7 +111,10 @@ array:2 [▼
     "subreddit" => "ImaginaryFuturism"
     "NSFW" => false
     "spoiler" => false
-    "createdUtc" => 1592228591.0
+    "createdUtc" => 1592228591.0,
+    "upvotes" => 462
+    "downvotes" => 0
+    "upvoteRatio" => 1.0
   ]
 ]
 ```
