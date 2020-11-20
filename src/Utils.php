@@ -98,16 +98,19 @@ class Utils
     {
         try {
             return [
-                'id'         => isset($post->id) ? $post->id : null,
-                'type'       => $type,
-                'title'      => isset($post->title) ? $post->title : null,
-                'postLink'   => isset($post->id) ? 'https://redd.it/' . $post->id : null,
-                'image'      => isset($post->url) ? $post->url : null,
-                'thumbnail'  => isset($post->thumbnail) ? $post->thumbnail : null,
-                'subreddit'  => isset($post->subreddit) ? $post->subreddit : null,
-                'NSFW'       => isset($post->over_18) ? $post->over_18 : null,
-                'spoiler'    => isset($post->spoiler) ? $post->spoiler : null,
-                'createdUtc' => isset($post->created_utc) ? $post->created_utc : null
+                'id'          => isset($post->id) ? $post->id : null,
+                'type'        => $type,
+                'title'       => isset($post->title) ? $post->title : null,
+                'postLink'    => isset($post->id) ? 'https://redd.it/' . $post->id : null,
+                'image'       => isset($post->url) ? $post->url : null,
+                'thumbnail'   => isset($post->thumbnail) ? $post->thumbnail : null,
+                'subreddit'   => isset($post->subreddit) ? $post->subreddit : null,
+                'NSFW'        => isset($post->over_18) ? $post->over_18 : null,
+                'spoiler'     => isset($post->spoiler) ? $post->spoiler : null,
+                'createdUtc'  => isset($post->created_utc) ? $post->created_utc : null,
+                'upvotes'     => isset($post->upvotes) ? $post->upvotes : null,
+                'downvotes'   => isset($post->downvotes) ? $post->downvotes : null,
+                'upvoteRatio' => isset($post->upvoteRatio) ? $post->upvoteRatio : null,
             ];
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage());
