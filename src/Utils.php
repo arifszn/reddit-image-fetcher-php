@@ -108,9 +108,8 @@ class Utils
                 'NSFW'        => isset($post->over_18) ? $post->over_18 : null,
                 'spoiler'     => isset($post->spoiler) ? $post->spoiler : null,
                 'createdUtc'  => isset($post->created_utc) ? $post->created_utc : null,
-                'upvotes'     => isset($post->upvotes) ? $post->upvotes : null,
-                'downvotes'   => isset($post->downvotes) ? $post->downvotes : null,
-                'upvoteRatio' => isset($post->upvoteRatio) ? $post->upvoteRatio : null,
+                'upvotes'     => isset($post->ups) ? $post->ups : null,
+                'upvoteRatio' => isset($post->upvote_ratio) ? $post->upvote_ratio : null,
             ];
         } catch (\Throwable $th) {
             throw new Exception($th->getMessage());

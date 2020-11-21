@@ -98,7 +98,6 @@ array:2 [▼
     "spoiler" => false
     "createdUtc" => 1593066557.0
     "upvotes" => 1899
-    "downvotes" => 0
     "upvoteRatio" => 1.0
   ]
   1 => array:10 [▼
@@ -113,7 +112,6 @@ array:2 [▼
     "spoiler" => false
     "createdUtc" => 1592228591.0,
     "upvotes" => 462
-    "downvotes" => 0
     "upvoteRatio" => 1.0
   ]
 ]
