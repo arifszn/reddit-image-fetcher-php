@@ -32,7 +32,6 @@ class Config
         'trippinthroughtime',
         'boottoobig',
         'HistoryMemes',
-        'fakehistoryporn',
         'OTMemes',
         'starterpacks',
         'gifs',
