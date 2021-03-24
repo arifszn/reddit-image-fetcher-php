@@ -114,7 +114,7 @@ class Config
     }
 
     /**
-     * get default meme subreddit library
+     * Get default meme subreddit library
      * 
      * @return string[] 
      */
@@ -124,7 +124,7 @@ class Config
     }
 
     /**
-     * get default meme subreddit library
+     * Get default meme subreddit library
      * 
      * @return string[] 
      */
@@ -134,7 +134,7 @@ class Config
     }
 
     /**
-     * get subreddit search type
+     * Get subreddit search type
      * 
      * @return string[] 
      */
