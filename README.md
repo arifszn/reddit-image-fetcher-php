@@ -1,6 +1,9 @@
 <p align="center">
-    <a href="https://arifszn.github.io/reddit-image-fetcher-php" target="_blank"><img src="https://arifszn.github.io/reddit-image-fetcher-php/img/logo/logo.png" alt="Reddit Image Fetcher" title="Reddit Image Fetcher" width="80"></a>
+    <a href="https://arifszn.github.io/reddit-image-fetcher-php" target="_blank">
+        <img src="https://arifszn.github.io/reddit-image-fetcher-php/img/logo/logo.png" alt="Reddit Image Fetcher" title="Reddit Image Fetcher" width="80">
+    </a>
 </p>
+
 <h1 align="center">Reddit Image Fetcher</h1>
 <p align="center">A PHP package for fetching reddit images, memes, wallpapers and more.</p>
 <p align="center"><a href="https://arifszn.github.io/reddit-image-fetcher-php">https://arifszn.github.io/reddit-image-fetcher-php</a></p>
@@ -8,7 +11,17 @@
 <p align="center">
     <a href="https://packagist.org/packages/arifszn/reddit-image-fetcher"><img src="https://img.shields.io/packagist/v/arifszn/reddit-image-fetcher"/></a>
     <a href="https://github.com/arifszn/reddit-image-fetcher-php/blob/master/LICENSE"><img src="https://img.shields.io/github/license/arifszn/reddit-image-fetcher-php"/></a>
-    <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/maintainer-arifszn-informational" alt="Maintainer arifszn"/></a>
+    <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/author-arifszn-blueviolet" alt="Author arifszn"/></a>
+</p>
+
+<br/>
+
+<p align="center">
+  <a href="https://arifszn.github.io/reddit-image-fetcher-php">
+    <img src="https://arifszn.github.io/reddit-image-fetcher-php/img/preview.gif" width="60%" alt="Preview"/>
+  </a>
+  <br/>
+  <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="60%" alt="Shadow"/></a>
 </p>
 
 - Bulk images
@@ -27,6 +40,8 @@ JavaScript version: <a href="https://github.com/arifszn/reddit-image-fetcher">Re
 * [Usage](#usage)
 * [Result](#result)
 * [Options](#options)
+* [Contribute](#contribute)
+* [Thank You](#thank-you)
 * [Support](#support)
 * [License](#license)
 
@@ -127,6 +142,18 @@ array:2 [▼
 | addSubreddit        | array   | Add subreddits to subreddit library                    | [ ]     |
 | removeSubreddit     | array   | Remove subreddits from subreddit library               | [ ]     |
 
+
+## Contribute
+
+To contribute, clone this repo locally and commit your code on a new branch. Feel free to create an issue or make a pull request.
+
+
+## Thank You
+
+[![Stargazers repo roster for @arifszn/reddit-image-fetcher-php](https://reporoster.com/stars/arifszn/reddit-image-fetcher-php)](https://github.com/arifszn/reddit-image-fetcher-php/stargazers)
+[![Forkers repo roster for @arifszn/reddit-image-fetcher-php](https://reporoster.com/forks/arifszn/reddit-image-fetcher-php)](https://github.com/arifszn/reddit-image-fetcher-php/network/members)
+
+
 ## Support
 
 Show your ❤️ and support by giving a ⭐ on <a href="https://github.com/arifszn/reddit-image-fetcher-php">Github</a>.
@@ -134,4 +161,4 @@ Show your ❤️ and support by giving a ⭐ on <a href="https://github.com/arif
 ## License
 
 <p>MIT Licensed.</p>
-<p>Copyright © <a href="https://arifszn.github.io">MD. Ariful Alam</a> 2020.</p>
+<p>Copyright © <a href="https://arifszn.github.io">MD. Ariful Alam</a> 2021.</p>
