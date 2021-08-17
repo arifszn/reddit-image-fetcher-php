@@ -81,6 +81,8 @@ $result = $redditImageFetcher->fetch(
 ); //returns 50 cat images
 ```
 
+</details>
+
 ## Result
 
 <details>
