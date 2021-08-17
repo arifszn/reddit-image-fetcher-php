@@ -10,8 +10,7 @@
 
 <p align="center">
     <a href="https://packagist.org/packages/arifszn/reddit-image-fetcher"><img src="https://img.shields.io/packagist/v/arifszn/reddit-image-fetcher"/></a>
-    <a href="https://github.com/arifszn/reddit-image-fetcher-php/blob/master/LICENSE"><img src="https://img.shields.io/github/license/arifszn/reddit-image-fetcher-php"/></a>
-    <a href="https://arifszn.github.io/"><img src="https://img.shields.io/badge/author-arifszn-blueviolet" alt="Author arifszn"/></a>
+    <a href="https://github.com/arifszn/reddit-image-fetcher-php/blob/main/LICENSE"><img src="https://img.shields.io/github/license/arifszn/reddit-image-fetcher-php"/></a>
 </p>
 
 <br/>
@@ -31,26 +30,14 @@
 - Lightweight
 - Zero dependency
 
-JavaScript version: <a href="https://github.com/arifszn/reddit-image-fetcher">Reddit Image Fetcher</a>
-
-## Table of Contents
-
-* [Resources](#resources)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Result](#result)
-* [Options](#options)
-* [Contribute](#contribute)
-* [Thank You](#thank-you)
-* [Support](#support)
-* [License](#license)
+> JavaScript version: <a href="https://github.com/arifszn/reddit-image-fetcher">Reddit Image Fetcher</a>
 
 ## Resources
 
 - [Demo](https://memedb.netlify.app)
 - [Documentation](https://arifszn.github.io/reddit-image-fetcher-php)
 
-# Installation
+## Installation
 
 Install via <a href="https://packagist.org/packages/arifszn/reddit-image-fetcher">composer</a>
 
@@ -61,34 +48,33 @@ composer require arifszn/reddit-image-fetcher
 ## Usage
 
 Available function:
-- fetch()
+
+<details>
+<summary>fetch()</summary>
 
 ```php
 use arifszn\RedditImageFetcher\RedditImageFetcher;
 
--------------------
--------------------
-
 
 $redditImageFetcher = new RedditImageFetcher();
-$redditImageFetcher->fetch('meme'); //returns 1 meme
-$redditImageFetcher->fetch('wallpaper'); //returns 1 wallpaper
+$result = $redditImageFetcher->fetch('meme'); // fetch 1 meme
+$result = $redditImageFetcher->fetch('wallpaper'); // fetch 1 wallpaper
 
 
-//options
-$redditImageFetcher->fetch('wallpaper', 50); //returns 50 wallpapers 
+// options
+$result = $redditImageFetcher->fetch('wallpaper', 50); // fetch 50 wallpapers
  
-$redditImageFetcher->fetch(
+$result = $redditImageFetcher->fetch(
     'meme',
     50,
     [],
     ['memes', 'funny'],
     ['dankmemes']
-); //returns 50 memes by adding two and removing 1 subreddits
+); // fetch 50 memes by adding two subreddits and removing 1 subreddit
 
 
-//custom image fetch from given subreddits
-$redditImageFetcher->fetch(
+// custom image fetch from given subreddits
+$result = $redditImageFetcher->fetch(
     'custom',
     50, 
     ['cats', 'Catswhoyell', 'sleepingcats']
@@ -97,7 +83,8 @@ $redditImageFetcher->fetch(
 
 ## Result
 
-The function returns array.
+<details>
+<summary>Sample Response</summary>
 
 ```php
 array:2 [▼
@@ -132,11 +119,14 @@ array:2 [▼
 ]
 ```
 
+</details>
+
+
 ## Options
 
 | Property            |  Type   | Description                                               | Default |
 | :-----------        | :---:   | :-------------------------------------                    | :----:  |
-| type               | string  | meme, wallpaper or custom image to fetch                         | 'meme'       |
+| type               | string  | <code>'meme'</code> \| <code>'wallpaper'</code> \| <code>'custom'</code> | <code>'meme'</code>       |
 | total               | int  | How many images to get. Max is 50                         | 1       |
 | subreddit        | array   | Custom subreddit libray                    |   [ ]   |
 | addSubreddit        | array   | Add subreddits to subreddit library                    | [ ]     |
@@ -151,12 +141,11 @@ To contribute, clone this repo locally and commit your code on a new branch. Fee
 ## Thank You
 
 [![Stargazers repo roster for @arifszn/reddit-image-fetcher-php](https://reporoster.com/stars/arifszn/reddit-image-fetcher-php)](https://github.com/arifszn/reddit-image-fetcher-php/stargazers)
-[![Forkers repo roster for @arifszn/reddit-image-fetcher-php](https://reporoster.com/forks/arifszn/reddit-image-fetcher-php)](https://github.com/arifszn/reddit-image-fetcher-php/network/members)
 
 
 ## Support
 
-Show your ❤️ and support by giving a ⭐ on <a href="https://github.com/arifszn/reddit-image-fetcher-php">Github</a>.
+Show your ❤️ and support by giving a star.
 
 ## License
 

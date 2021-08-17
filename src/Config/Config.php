@@ -8,7 +8,7 @@ class Config
 {
     /**
      * Default meme subreddit
-     * 
+     *
      * @var string[]
      */
     private $memeSubreddit = [
@@ -55,7 +55,7 @@ class Config
 
     /**
      * Default wallpaper subreddit
-     * 
+     *
      * @var string[]
      */
     private $wallpaperSubreddit = [
@@ -94,7 +94,7 @@ class Config
 
     /**
      * Default search type
-     * 
+     *
      * @var string[]
      */
     private $searchType = [
@@ -104,19 +104,19 @@ class Config
     ];
 
     /**
-     * Constructor
-     * 
-     * @return void 
+     * Create a new instance
+     *
+     * @return void
      */
     public function __construct()
     {
-        //constructor
+        //
     }
 
     /**
      * Get default meme subreddit library
-     * 
-     * @return string[] 
+     *
+     * @return string[]
      */
     public function getMemeSubReddit()
     {
@@ -125,8 +125,8 @@ class Config
 
     /**
      * Get default meme subreddit library
-     * 
-     * @return string[] 
+     *
+     * @return string[]
      */
     public function getWallpaperSubReddit()
     {
@@ -135,8 +135,8 @@ class Config
 
     /**
      * Get subreddit search type
-     * 
-     * @return string[] 
+     *
+     * @return string[]
      */
     public function getSearchType()
     {

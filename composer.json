@@ -6,11 +6,11 @@
     "authors": [
         {
             "name": "MD. Ariful Alam",
-            "email": "swazan.arif@gmail.com",
+            "email": "arifulalamszn@gmail.com",
             "homepage": "https://arifszn.github.io"
         }
     ],
-    "homepage": "https://arifszn.github.io/reddit-image-fetcher-php",
+    "homepage": "https://github.com/arifszn/reddit-image-fetcher-php",
     "keywords": [
         "reddit",
         "reddit image",
