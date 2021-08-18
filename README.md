@@ -57,11 +57,10 @@ use arifszn\RedditImageFetcher\RedditImageFetcher;
 
 
 $redditImageFetcher = new RedditImageFetcher();
+    
 $result = $redditImageFetcher->fetch('meme'); // fetch 1 meme
 $result = $redditImageFetcher->fetch('wallpaper'); // fetch 1 wallpaper
 
-
-// options
 $result = $redditImageFetcher->fetch('wallpaper', 50); // fetch 50 wallpapers
     
 // custom image fetch from given subreddits
@@ -69,7 +68,7 @@ $result = $redditImageFetcher->fetch(
     'custom',
     50, 
     ['cats', 'Catswhoyell', 'sleepingcats']
-); //returns 50 cat images
+); // fetch 50 cat images from custom subreddit library
  
 $result = $redditImageFetcher->fetch(
     'meme',
@@ -77,7 +76,7 @@ $result = $redditImageFetcher->fetch(
     [],
     ['memes', 'funny'],
     ['dankmemes']
-); // fetch 50 memes by adding two subreddits and removing 1 subreddit
+); // fetch 50 memes by adding two subreddits and removing 1 subreddit from default subreddit library
 
 ```
 
