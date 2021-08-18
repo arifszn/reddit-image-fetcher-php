@@ -63,6 +63,13 @@ $result = $redditImageFetcher->fetch('wallpaper'); // fetch 1 wallpaper
 
 // options
 $result = $redditImageFetcher->fetch('wallpaper', 50); // fetch 50 wallpapers
+    
+// custom image fetch from given subreddits
+$result = $redditImageFetcher->fetch(
+    'custom',
+    50, 
+    ['cats', 'Catswhoyell', 'sleepingcats']
+); //returns 50 cat images
  
 $result = $redditImageFetcher->fetch(
     'meme',
@@ -72,13 +79,6 @@ $result = $redditImageFetcher->fetch(
     ['dankmemes']
 ); // fetch 50 memes by adding two subreddits and removing 1 subreddit
 
-
-// custom image fetch from given subreddits
-$result = $redditImageFetcher->fetch(
-    'custom',
-    50, 
-    ['cats', 'Catswhoyell', 'sleepingcats']
-); //returns 50 cat images
 ```
 
 </details>
