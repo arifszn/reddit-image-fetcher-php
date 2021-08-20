@@ -128,10 +128,10 @@ array:2 [▼
 | Property            |  Type   | Description                                               | Default |
 | :-----------        | :---:   | :-------------------------------------                    | :----:  |
 | type               | string  | <code>'meme'</code> \| <code>'wallpaper'</code> \| <code>'custom'</code> | <code>'meme'</code>       |
-| total               | int  | How many images to get. Max is 50                         | 1       |
-| subreddit        | array   | Custom subreddit libray                    |   [ ]   |
-| addSubreddit        | array   | Add subreddits to subreddit library                    | [ ]     |
-| removeSubreddit     | array   | Remove subreddits from subreddit library               | [ ]     |
+| total               | int  | How many images to get. Max is 50                         | <code>1</code>       |
+| subreddit        | array   | Custom subreddit libray                    |   <code>[ ]</code>   |
+| addSubreddit        | array   | Add subreddits to subreddit library                    | <code>[ ]</code>     |
+| removeSubreddit     | array   | Remove subreddits from subreddit library               | <code>[ ]</code>     |
 
 
 ## Contribute
@@ -146,7 +146,7 @@ To contribute, clone this repo locally and commit your code on a new branch. Fee
 
 ## Support
 
-Show your ❤️ and support by giving a star.
+Show your ❤️ and support by giving a ⭐.
 
 ## License
 
