@@ -47,11 +47,6 @@ composer require arifszn/reddit-image-fetcher
 
 ## Usage
 
-Available function:
-
-<details>
-<summary>fetch()</summary>
-
 ```php
 use arifszn\RedditImageFetcher\RedditImageFetcher;
 
@@ -80,12 +75,7 @@ $result = $redditImageFetcher->fetch(
 
 ```
 
-</details>
-
-## Result
-
-<details>
-<summary>Sample Response</summary>
+## Sample Response
 
 ```php
 array:2 [▼
@@ -120,8 +110,6 @@ array:2 [▼
 ]
 ```
 
-</details>
-
 
 ## Options
 
@@ -150,5 +138,4 @@ Show your ❤️ and support by giving a ⭐.
 
 ## License
 
-<p>MIT Licensed.</p>
-<p>Copyright © <a href="https://arifszn.github.io">MD. Ariful Alam</a> 2021.</p>
+**Reddit Image Fetcher** is licensed under the [MIT License](https://github.com/arifszn/reddit-image-fetcher-php/blob/main/LICENSE).
