@@ -20,7 +20,7 @@
     <img src="https://arifszn.github.io/reddit-image-fetcher-php/img/preview.gif" width="60%" alt="Preview"/>
   </a>
   <br/>
-  <a href="#arifszn"><img src="https://arifszn.netlify.app/assets/img/drop-shadow.png" width="60%" alt="Shadow"/></a>
+  <a href="#arifszn"><img src="https://github.com/user-attachments/assets/54106eb3-70dd-422a-9243-45cf8e65c17b" width="60%" alt="Shadow"/></a>
 </p>
 
 - Bulk images
